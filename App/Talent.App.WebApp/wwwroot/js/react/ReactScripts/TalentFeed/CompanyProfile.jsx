@@ -1,9 +1,6 @@
 ﻿import React from 'react';
 import { Loader } from 'semantic-ui-react';
 
-const bottomBorder = {
-    marginBottom: '15px'
-}
 
 export default class CompanyProfile extends React.Component {
     constructor(props) {
@@ -24,7 +21,7 @@ export default class CompanyProfile extends React.Component {
             <React.Fragment>
                 <div className="ui card">
                     <div className="content">
-                        <div className="center aligned header" style={bottomBorder}>
+                        <div className="center aligned header">
                             <img
                                 className="ui tiny circular image"
                                 src="https://react.semantic-ui.com/images/wireframe/image.png">
@@ -34,7 +31,7 @@ export default class CompanyProfile extends React.Component {
                             {name} 
                         </div>
                         <div className="center aligned meta">
-                            <i class="map pin icon"></i>
+                            <i className="map pin icon"></i>
                             {city}, {country}
                             </div>
                         <div className="center aligned description">
@@ -43,9 +40,9 @@ export default class CompanyProfile extends React.Component {
                     </div>
                     <div className="extra">
                         <div className="left aligned author">
-                            <i class="phone icon"></i>
+                            <i className="phone icon"></i>
                             : {phone}<br/>
-                            <i class="envelope icon"></i>
+                            <i className="envelope icon"></i>
                             : {email}
                         </div>
                     </div>

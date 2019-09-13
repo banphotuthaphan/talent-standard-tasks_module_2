@@ -36,8 +36,6 @@ export default class TalentFeed extends React.Component {
     init() {
         let loaderData = TalentUtil.deepCopy(this.state.loaderData)
         loaderData.isLoading = false;
-        //loader.allowedUsers.push("Employer")
-        //loader.allowedUsers.push("Recruiter")
         this.setState({ loaderData });//comment this
     }
 
@@ -109,8 +107,10 @@ export default class TalentFeed extends React.Component {
 
     handleScroll() {
 
-        const scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        const scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
+        const scrollTop = (document.documentElement && document.documentElement.scrollTop) || 
+                          document.body.scrollTop;
+        const scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || 
+                             document.body.scrollHeight;
         const clientHeight = document.documentElement.clientHeight || window.innerHeight;
         const scrolledToBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
 
@@ -125,14 +125,9 @@ export default class TalentFeed extends React.Component {
     }
 
     render() {
-
         const { feedData: talentList } = this.state;
-
-
-
         const companyDetails = this.state.companyDetails ? this.state.companyDetails : "";
-        console.log('Feed data', this.state.feedData);
-        //<h4> There are no talents found for your recruitment company</h4>
+
         return (
             <BodyWrapper reload={this.init} loaderData={this.state.loaderData}>
                 <div className="ui grid talent-feed container">

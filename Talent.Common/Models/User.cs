@@ -37,9 +37,7 @@ namespace Talent.Common.Models
 
         public string PrimaryCV { get; set; }
 
-        [BsonRepresentation(BsonType.Array)]
-        public string TalentCVs { get; set; }
-        public string Element { get; set; }
+        public dynamic TalentCVs { get; set; }
 
         public List<UserLanguage> Languages { get; set; }
         public List<UserSkill> Skills { get; set; }
