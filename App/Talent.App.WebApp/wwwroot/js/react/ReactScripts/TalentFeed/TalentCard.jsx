@@ -62,7 +62,7 @@ export default class TalentCard extends React.Component {
             skills } = this.props.data;
 
         return (
-            <div style={cardWidth} className="ui fluid card items">
+            <div className="ui fluid card items">
                 <div className="content">
                     <i className="right floated star icon"></i>
                     <div className="header">{name}</div>
